@@ -5,3 +5,24 @@
     background-position: center;
     height: 100vh;
 }
+
+body{
+        font-family: "New Rocker", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        font-size:xx-large;
+}
+.d-flex{
+    height: 95vh; 
+    margin: 0;
+}
+
+.highlight-text {
+    font-size:xx-large; 
+            color: rgb(0, 0, 0); 
+            text-shadow: 
+                2px 2px 4px rgba(117, 117, 117, 0.2),  
+                0px 0px 25px rgba(255, 0, 200, 0.4), 
+                0px 0px 5px rgba(225, 0, 255, 0.6);
+}
