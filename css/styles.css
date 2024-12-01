@@ -14,7 +14,7 @@ body{
         font-size:xx-large;
 }
 .d-flex{
-    height: 75vh; 
+    height: 80vh; 
     margin: 0;
 }
 
@@ -22,7 +22,7 @@ body{
     font-size:xx-large; 
             color: rgb(0, 0, 0); 
             text-shadow: 
-                2px 2px 4px rgba(117, 117, 117, 0.2),  
+                2px 2px 4px rgba(234, 0, 255, 0.918),  
                 0px 0px 25px rgba(255, 0, 200, 0.4), 
                 0px 0px 5px rgba(225, 0, 255, 0.6);
 }
