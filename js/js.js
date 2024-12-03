@@ -30,33 +30,45 @@ console.log(userName ? `${userName} asks: ${userQuestion}` : `You ask: ${userQue
 //   console.log(`The Magic Eight Ball says: ${eightBall}`);
 
 // making it interactive
-  const askButton = document.getElementById('askButton');
+const askButton = document.getElementById('askButton');
 const userQuestionInput = document.getElementById('userQuestion');
 const eightBallOutput = document.getElementById('eightBallOutput');
-
+const userNameInput = document.getElementById('userName').textContent
 
 const responses = [
-    'It is certain',
-    'Yuh huh',
-    'Sorry, say again?',
-    'Ask again in 5',
-    'Do not count on it',
-    'GODS NO',
-    'Nuh uh',
-    'Signs point to yes'
-  ];
+  'It is certain',
+  'Yuh huh',
+  'Sorry, say again?',
+  'Ask again in 5',
+  'Do not count on it',
+  'GODS NO',
+  'Nuh uh',
+  'Signs point to yes'
+];
 
-  askButton.addEventListener('click', () => {
-    const userQuestion = userQuestionInput.value.trim();
+askButton.addEventListener('click', () => {
+  const userQuestion = userQuestionInput.value.trim();
+
+  if (userQuestion) {
+    // Generate a random response
+    const randomNumber = Math.floor(Math.random() * responses.length);
+    const eightBallResponse = responses[randomNumber];
+
+    eightBallOutput.textContent = `${eightBallResponse}`;
+  } else {
+    // Handle empty question
+    eightBallOutput.textContent = 'Please ask a question!';
+  }
+});
+
+
+document.getElementById('userName').addEventListener("blur", (event) => {
   
-    if (userQuestion) {
-        // Generate a random response
-        const randomNumber = Math.floor(Math.random() * responses.length);
-        const eightBallResponse = responses[randomNumber];
-
-        eightBallOutput.textContent = `${eightBallResponse}`;
-    } else {
-      // Handle empty question
-      eightBallOutput.textContent = 'Please ask a question!';
-    }
-  });
+  if (1 != 5) {
+    console.log(`${userNameInput}`)
+    Greeting.textContent = `Hello ${document.getElementById('userName').textContent}!`
+  }
+  else {
+    Greeting.textContent = 'Hello!'
+  }
+});
