@@ -33,7 +33,7 @@ console.log(userName ? `${userName} asks: ${userQuestion}` : `You ask: ${userQue
 const askButton = document.getElementById('askButton');
 const userQuestionInput = document.getElementById('userQuestion');
 const eightBallOutput = document.getElementById('eightBallOutput');
-const userNameInput = document.getElementById('userName').textContent
+const userNameInput = document.getElementById('userName')
 
 const responses = [
   'It is certain',
@@ -63,12 +63,14 @@ askButton.addEventListener('click', () => {
 
 
 document.getElementById('userName').addEventListener("blur", (event) => {
-  
-  if (1 != 5) {
-    console.log(`${userNameInput}`)
-    Greeting.textContent = `Hello ${document.getElementById('userName').textContent}!`
+console.log(userNameInput.value);
+
+  if (userNameInput.value == '') {
+    Greeting.textContent = 'Hello!'
+    
   }
   else {
-    Greeting.textContent = 'Hello!'
+    console.log(`${ userNameInput.value }`)
+    Greeting.textContent = `Hello ${ userNameInput.value }`
   }
 });
